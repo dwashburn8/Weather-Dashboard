@@ -76,7 +76,7 @@ $(document).ready(function () {
 
     });
     function weather() {
-        var queryUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + apiKey;
+        var queryUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + apiKey;
 
         $.ajax({
             url: queryUrl,
@@ -89,7 +89,7 @@ $(document).ready(function () {
 
 
             var iconCode = response.weather[0].icon;
-            var iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
+            var iconUrl = "https://openweathermap.org/img/w/" + iconCode + ".png";
             $("#icon").attr("src", iconUrl)
             var uvIndex = response
             newP1.text("Temperature: " + response.main.temp + "°F")
@@ -111,7 +111,7 @@ $(document).ready(function () {
 
     function fiveDayForecast() {
 
-        var fiveDay = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=" + apiKey
+        var fiveDay = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=" + apiKey
 
         $.ajax({
             url: fiveDay,
@@ -127,7 +127,7 @@ $(document).ready(function () {
                 var time = data.list[i].dt_txt.substring(11)
                 var date = data.list[i].dt_txt.substring(0, 10)
                 var iconCode2 = data.list[i].weather[0].icon;
-                var iconUrl2 = "http://openweathermap.org/img/w/" + iconCode2 + ".png";
+                var iconUrl2 = "https://openweathermap.org/img/w/" + iconCode2 + ".png";
                 // $("#icon").attr("src", iconUrl)
                 var fiveDayTemp = data.list[i].main.temp;
                 var fiveDayHumidity = data.list[i].main.humidity;
