@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <header class="text-center bg-dark text-light">
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card text-white bg-secondary mb-3">
+                    <h5 class="card-header">Search for a City:</h5>
+                    <div class="input-group mb-3">
+                        <input id="input" type="text" class="form-control input-group-sm" aria-label="Recipient's username"
+                            aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button" id="button-addon2">Search</button>
+                        </div>
+                        
+                    </div>
+                    <ul id="cities"></ul>
+                </div>
+                
+            </div>
+            <div class="col">
+                <div class="card text-white bg-secondary mb-3" id="weatherInfo">
+
+                    <div class="card-header d-flex" id="header">
+                        <h5 class="pt-2" id="city"></h5>
+                        <img id="icon" src="" alt="" class="pl-3">
+                    </div>
+                    <p id="p1"></p>
+                        <p id="p2"></p>
+                        <p id="p3"></p>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div id="5DayForecast" class="col card text-white bg-secondary mb-3 d-flex">
+                <h5 class="card-header">5-Day Forecast</h5>
+        <div class="row">
+                    <div class="col">
+                            <div class="text-center card text-white bg-primary mb-3" >
+                                    <div class="card-header" id="0"></div>
+                                    <div class="text-center card-body">
+                                      <img id="forecast0" src="" alt="">
+                                      <p class="card-text" id="temp0"></p>
+                                      <p class="card-text" id="hum0"></p>
+                                    </div>
+                    </div>
+                    </div>
+                    <div class="col">
+                            <div  class="text-center card text-white bg-primary mb-3" >
+                                    <div id="1" class="card-header"></div>
+                                    <div class="text-center card-body">
+                                     <img id="forecast1" src="" alt="">
+                                      <p class="card-text" id="temp1"></p>
+                                      <p class="card-text" id="hum1"></p>
+                                    </div>
+                    </div>
+                </div>
+                    <div  class="col">
+                            <div  class=" text-center card text-white bg-primary mb-3" >
+                                    <div id="2" class="card-header"></div>
+                                    <div class="text-center card-body">
+                                     <img id="forecast2" src="" alt="">
+                                      <p class="card-text" id="temp2"></p>
+                                      <p class="card-text" id="hum2"></p>
+                                    </div>
+                    </div>
+                </div>
+                    <div  class="col">
+                            <div class="text-center card text-white bg-primary mb-3" >
+                                    <div  id="3" class="card-header"></div>
+                                    <div class="text-center card-body">
+                                      <img id="forecast3"  src="" alt="">
+                                      <p class="card-text" id="temp3"></p>
+                                      <p class="card-text" id="hum3"></p>
+                                    </div>
+                    </div>
+                </div>
+                    <div  class="col">
+                            <div class="text-center card text-white bg-primary mb-3" >
+                                    <div  id="4" class="card-header"></div>
+                                    <div class="text-center card-body">
+                                      <img id="forecast4"class="card-title">
+                                      <p class="card-text" id="temp4"></p>
+                                      <p class="card-text" id="hum4"></p>
+                                    </div>
+                    </div>
+
+                </div>
+            
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+</body>
+
+</html>
